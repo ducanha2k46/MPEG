@@ -38,7 +38,7 @@ from MPEG import MPEG_RoBERTa
 from models.RoBERTa.configuration_roberta import RobertaConfig
 import wandb
 
-wandb.init(project="cause-iemocap", entity="tim4")
+wandb.init(project="cause-iemocap")
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(filename)s[line:%(lineno)d] - %(message)s',
                     datefmt='%Y/%m/%d %H:%M:%S',
@@ -185,6 +185,10 @@ def main():
         "train_batch_size": args.train_batch_size,
         "gradient_accumulation_steps": args.gradient_accumulation_steps
     }
+
+    
+    print(args.local_rank)
+    print(args.no_cuda)
 
     if args.local_rank == -1 or args.no_cuda:
         device = torch.device("cuda" if torch.cuda.is_available() and not args.no_cuda else "cpu")
