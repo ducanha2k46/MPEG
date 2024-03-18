@@ -135,7 +135,7 @@ semver==2.13.0
 sentry-sdk==1.5.8
 seqeval==1.2.2
 setproctitle==1.2.2
-setuptools==51.0.0.post20201207
+# setuptools==51.0.0.post20201207
 shortuuid==1.0.8
 simpletransformers==0.50.0
 six==1.15.0

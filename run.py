@@ -186,7 +186,6 @@ def main():
         "gradient_accumulation_steps": args.gradient_accumulation_steps
     }
 
-    
     print(args.local_rank)
     print(args.no_cuda)
 
